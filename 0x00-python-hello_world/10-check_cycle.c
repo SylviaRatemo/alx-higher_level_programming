@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "lists.h"
 
 /**
  * check_cycle - function to check if singly linked list has a cycle
@@ -11,6 +11,10 @@ int check_cycle(listint_t *list)
 	listint_t *first, *second;
 
 	first = second = list;
+
+	if (!list)
+		return (0);
+
 	while (first && second && second->next)
 	{
 		first = first->next;
