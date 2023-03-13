@@ -11,4 +11,4 @@ def print_reversed_list_integer(my_list=[]):
             j += 1
         count -= 1
     for k in my_list:
-        print("{}".format(k))
+        print("{:d}".format(k))
