@@ -10,4 +10,5 @@ def print_reversed_list_integer(my_list=[]):
                 my_list[j + 1] = temp
             j += 1
         count -= 1
-    print(my_list)
+    for k in my_list:
+        print(k)
