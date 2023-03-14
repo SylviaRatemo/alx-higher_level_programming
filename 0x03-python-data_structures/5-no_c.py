@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 def no_c(my_string):
-    reps = [('c', ''), ('C', '')]
-    for char, rep in reps:
-        if char in my_string:
-            my_string = my_string.replace(char, rep)
+    new_string = my_string.translate({ord(i): None for i in 'Cc'})
 
-    print(my_string)
+    print(new_string)
