@@ -1,5 +1,7 @@
 #!/usr/bin/python3i
-index = 0
-for character in range(ord('z'), ord('a') - 1, -1):
-    print("{}".format(chr(character - index)), end="")
-    index = 32 if index == 0 else 0
+i = 97
+while i < 123:
+    if i == 122:
+        print(i)
+    print("{}".format(i),end="")
+    i += 1
