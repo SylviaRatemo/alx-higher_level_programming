@@ -45,8 +45,8 @@ class Square:
 
     def my_print(self):
         """Funtion to print in stdout the square with #."""
-        count = self.__size
-        if (count == 0):
+        if self.__size == 0:
             print()
-        while (count > 0):
-            print("#", end="")
+        for i in range(0, self.__size):
+            [print("#", end="") for k in range(self.__size)]
+            print()
