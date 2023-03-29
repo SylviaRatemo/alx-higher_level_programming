@@ -18,7 +18,7 @@ class Square:
     def size(self):
         """Gettor function.
         Returns:
-            The size of the square.
+        The size of the square.
         """
         return (self.__size)
 
@@ -47,10 +47,10 @@ class Square:
         """Position gettor function."""
         if (not isinstance(value, tuple) or
                 len(value) != 2 or
-                    not all (isinstance(num, int) for num in value) or
-                    not all (num >= 0 for num in value)):
+                not all(isinstance(num, int) for num in value) or
+                not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = value 
+        self.__position = value
 
     def area(self):
         """Public function compute area.
@@ -67,6 +67,6 @@ class Square:
             return
         [print() for i in range(0, self.__position[1])]
         for i in range(0, self.__size):
-            [print(" ", end ="") for l in range(0, self.__position[0])]
+            [print(" ", end="") for j in range(0, self.__position[0])]
             [print("#", end="") for k in range(self.__size)]
             print()
