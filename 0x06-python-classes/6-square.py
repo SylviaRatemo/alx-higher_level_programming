@@ -37,17 +37,20 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
+    @property
     def position(self):
         """Position settor function."""
         return (self.__position)
 
+    @position.setter
     def position(self, value):
         """Position gettor function."""
-        pos = self.__position
-        check = list(filter(lambda sub: all(pos >= 0 for pos), value))
-        if check == NULL:
+        if (not isinstance(value, tuple) or
+                len(value) != 2 or
+                    not all (isinstance(num, int) for num in value) or
+                    not all (num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = position
+        self.__position = value 
 
     def area(self):
         """Public function compute area.
@@ -61,6 +64,9 @@ class Square:
         """Funtion to print in stdout the square with #."""
         if self.__size == 0:
             print()
+            return
+        [print() for i in range(0, self.__position[1])]
         for i in range(0, self.__size):
+            [print(" ", end ="") for l in range(0, self.__position[0])]
             [print("#", end="") for k in range(self.__size)]
             print()
