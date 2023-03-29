@@ -6,20 +6,25 @@ class Square:
     """Representation of a square."""
 
     def __init__(self, size=0):
-        """Initialization function."""
-        self.__size = size
+        """Initialization function.
+        Attributes:
+            size (int): size of the square
+        """
+        self.size = size
 
+    @property
     def size(self):
         """Gettor function.
         Returns:
             The size of the square.
         """
-        return (self.__value)
+        return (self.__size)
 
+    @size.setter
     def size(self, value):
         """Settor function.
         Attributes:
-            value (int): size of the square
+            size (int): size of the square
         Raises:
             ValueError: If size < 0
             TypeError: If size is not an int
@@ -28,7 +33,7 @@ class Square:
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
-        self.__value = value
+        self.__size = value
 
     def area(self):
         """Public function compute area.
