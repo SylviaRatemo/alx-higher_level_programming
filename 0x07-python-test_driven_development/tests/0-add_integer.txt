@@ -1,0 +1,7 @@
+The 0-add_integer module
+=============================
+
+Using 'add'
+-----------------------------
+
+>>> from 0-add_integer import add_integer
