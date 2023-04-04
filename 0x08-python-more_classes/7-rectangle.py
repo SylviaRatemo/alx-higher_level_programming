@@ -6,7 +6,7 @@ class Rectangle:
     """Representation of a rectangle"""
 
     number_of_instances = 0
-    print_symbol = ["#"]
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Initialization function
@@ -80,7 +80,7 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return rect
         for i in range(self.__height):
-            rect += (Rectangle.print_symbol * self.__width)
+            rect += (str(Rectangle.print_symbol) * self.__width)
             if i != self.__height - 1:
                 rect += "\n"
         return(rect)
