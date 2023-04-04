@@ -68,16 +68,14 @@ class Rectangle:
             return 0
         return 2 * (self.__height + self.__width)
 
-def __str__(self):
-    """Function to print rectangle with #"""
+    def __str__(self):
+        """Function to print rectangle with #"""
 
-    rect = ""
-    if self.__height == 0 or self.__width == 0:
-        return rect
-    for i in range(self.__height):
-        for j in range(self.__width):
-            rect += "#"
-
+        rect = ""
+        if self.__height == 0 or self.__width == 0:
+            return rect
+        for i in range(self.__height):
+            rect += ("#" * self.__width)
             if i != self.__height - 1:
                 rect += "\n"
-    return rect
+        return(rect)
