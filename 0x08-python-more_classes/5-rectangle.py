@@ -5,6 +5,7 @@
 class Rectangle:
     """Representation of a rectangle"""
 
+    counter = 0
     def __init__(self, width=0, height=0):
         """Initialization function
         Attributes:
@@ -13,6 +14,7 @@ class Rectangle:
         """
         self.height = height
         self.width = width
+        counter += 1
 
     @property
     def height(self):
@@ -85,3 +87,7 @@ class Rectangle:
         h = str('self.height')
         w = str('self.width')
         return "Rectangle({}, {})".format(eval(h), eval(w))
+
+    del __del__(self):
+        """Function to print message on deletion of class instance"""
+        print("Bye rectangle...")
