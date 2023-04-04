@@ -1,13 +1,18 @@
 #!/usr/bin/python3
-"""A class description of a rectangle based on 1-rectangle"""
+"""A class description of a rectangle based on 0-rectangle."""
 
 
 class Rectangle:
     """Representation of a rectangle"""
 
     def __init__(self, width=0, height=0):
-        self.width = width
+        """Initialization function
+        Attributes:
+            width (int): width of the rectangle
+            height (int): height of the rectangle
+        """
         self.height = height
+        self.width = width
 
     @property
     def width(self):
@@ -50,9 +55,11 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        return self.__height * self.__weight
+        """Function to compute the area of a rectangle"""
+        return self.__height * self.__width
 
     def perimeter(self):
-        if self.__height == 0 or self.__width == 0:
+        """Function to compute the perimeter of a rectangle"""
+        if self.__height == 0 or safe.__width == 0:
             return 0
-        return 2 * (self.__height + self.__width)
+        return 2 * (self.__height * self.__width
