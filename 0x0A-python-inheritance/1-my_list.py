@@ -4,6 +4,7 @@
 
 class MyList(list):
     """Class definition for MyList"""
+    pass
 
     def print_sorted(self):
         return (sorted(list(self))
