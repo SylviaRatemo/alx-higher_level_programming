@@ -4,7 +4,7 @@
 
 def inherits_from(obj, a_class):
     """Function definition for inheritance"""
-    
+
     if type(obj) is a_class:
         return False
     elif isinstance(obj, a_class):
