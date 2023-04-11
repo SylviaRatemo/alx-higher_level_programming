@@ -32,6 +32,6 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         return "[Rectangle] <width>/<height>"
-    
+
     def __print__(self):
         print(sel.__str__)
