@@ -7,5 +7,5 @@ def save_to_json_file(my_obj, filename):
     """Function definition"""
 
     text = json.dumps(my_obj)
-    with open(filename, mode="w", encoding="utf-8") as myFile:
+    with open(filename, mode="w") as myFile:
         return myFile.write(text)
