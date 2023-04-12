@@ -3,7 +3,7 @@
 
 
 def read_file(filename=""):
-	"""Function definition"""
+    """Function definition"""
 
-	with open(filename, mode="r", encoding="utf-8") as myFile:
-		print(myFile.read())
+    with open(filename, mode="r", encoding="utf-8") as myFile:
+        print(myFile.read())
