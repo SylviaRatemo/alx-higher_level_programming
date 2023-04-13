@@ -5,7 +5,7 @@
 class Student:
     """Class student descriptio"""
 
-    def __init__(self, first_name,="", last_name="", age=0):
+    def __init__(self, first_name="", last_name="", age=0):
         """Class constructor
         Attributes:
             first_name (str): First name
