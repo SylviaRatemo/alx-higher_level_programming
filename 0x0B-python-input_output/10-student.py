@@ -17,7 +17,10 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """Get dictionary of student"""
+        """Get dictionary of student
+        Attributes:
+            attrs (list): attributes to be printed
+        """
         if (type(attrs) == list and all(type(i) == str for i in attrs)):
             return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         return self.__dict__
