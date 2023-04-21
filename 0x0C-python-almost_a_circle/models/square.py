@@ -46,7 +46,7 @@ class Square(Rectangle):
                 self.x = i
             elif count == 4:
                 self.y = i
-        
+
         if len(args) == 0:
             for key, value in kwargs.items():
                 if key == "id":
