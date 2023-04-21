@@ -137,4 +137,7 @@ class Rectangle(Base):
                 elif key == "height":
                     self.height = value
                 elif key == "id":
-                    self.id == value
+                    if value is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = value
