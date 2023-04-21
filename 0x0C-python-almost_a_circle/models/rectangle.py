@@ -84,6 +84,7 @@ class Rectangle(Base):
 
     def display(self):
         """Method to print Rectangle using #"""
+
         s = '\n' * self.y + \
             (' ' * self.x + '#' * self.width + '\n') * self.height
         print(s, end='')
