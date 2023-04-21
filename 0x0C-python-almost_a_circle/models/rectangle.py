@@ -7,7 +7,17 @@ class Rectangle(Base):
     """Class Description"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Constructor"""
+        """Constructor
+        Attributes:
+            width (int): Rectangle width
+            height (int): Rectangle height
+            x (int): x coordinate
+            y (int): y coordinate
+            id (int): identity of rectangle
+        Raises:
+            ValueError: width or height <= 0, x or y < 0
+            TypeError: widh, height, x, y not int
+        """
 
         super().__init__(id)
         self.width = width
@@ -85,6 +95,9 @@ class Rectangle(Base):
     def display(self):
         """Method to print Rectangle using #"""
 
+        if self.width == 0 or self.height == 0:
+            print("")
+            return
         s = '\n' * self.y + \
             (' ' * self.x + '#' * self.width + '\n') * self.height
         print(s, end='')
