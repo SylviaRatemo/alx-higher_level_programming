@@ -16,4 +16,4 @@ class Square(Rectangle):
 
         name = type(self).__name__
         return '[{}] ({}) {}/{} - {}'.\
-                format(name, self.id, self.x, self.y, self.height)
+            format(name, self.id, self.x, self.y, self.height)
