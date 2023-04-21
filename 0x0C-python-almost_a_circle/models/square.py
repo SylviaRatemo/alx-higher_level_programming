@@ -31,3 +31,32 @@ class Square(Rectangle):
         super().validation("width", value, False)
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """method to assign attributes"""
+
+        count = 0
+        for i in args:
+            count += 1
+            if count == 1:
+                self.id = i
+            elif count == 2:
+                self.width = i
+            elif count == 3:
+                self.x = i
+            elif count == 4:
+                self.y = i
+        
+        if len(args) == 0:
+            for key, value in kwargs.items():
+                if key == "id":
+                    if value is None:
+                        self.__init__(self.width, self.x, self.y)
+                    else:
+                        self.id = value
+                elif key == "size":
+                    self.width = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value
