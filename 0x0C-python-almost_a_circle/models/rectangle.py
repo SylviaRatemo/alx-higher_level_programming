@@ -92,5 +92,6 @@ class Rectangle(Base):
     def __str__(self):
         """String magic method"""
 
-        return "[{}] ({}) {}/{} - {}/{}".\
-                format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
+        name = type(self).__name__
+        return '[{}] ({}) {}/{} - {}/{}'.\
+            format(name, self.id, self.x, self.y, self.width, self.height)
