@@ -1,3 +1,3 @@
 -- compound sql query
-SELECT cities.id, cities.name, states.name FROM cities, states ORDER BY cities.id;
+SELECT cities.id, cities.name, states.name FROM states INNER JOIN cities ON states.id = cities.state_id;
 
