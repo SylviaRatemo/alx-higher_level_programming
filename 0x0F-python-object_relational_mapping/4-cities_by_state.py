@@ -10,9 +10,9 @@ if __name__ == "__main__":
     cursor = connection.cursor()
 
     sql = """
-    SELECT t1.id, t2.name, t1.name
+    SELECT t1.id, t1.name, t2.name
     FROM cities t1
-    JOIN states t2 ON t1.state_id = t2.id ORDER BY t1.id ASC"""
+    JOIN states t2 ON t1.state_id = t2.id ORDER BY t1.id ASC;"""
     cursor.execute(sql)
     query_rows = cursor.fetchall()
     for row in query_rows:
