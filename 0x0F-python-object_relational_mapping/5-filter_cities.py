@@ -12,7 +12,8 @@ if __name__ == "__main__":
     sql = """
     SELECT t1.name
     FROM cities t1
-    LEFT JOIN states t2 ON t1.state_id = t2.id WHERE t2.name = %s ORDER BY t1.id ASC;"""
+    LEFT JOIN states t2 ON t1.state_id = t2.id WHERE t2.name = %s
+    ORDER BY t1.id ASC;"""
     cursor.execute(sql, (value,))
     query_rows = [row[0] for row in cursor.fetchall()]
     print(", ".join(query_rows), end='\n')
