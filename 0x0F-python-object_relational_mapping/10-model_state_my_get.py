@@ -16,10 +16,11 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     arg = sys.argv[4]
-    orm = session.query(State).filter(State.name == arg).order_by(State.id).all()
+    orm = session.query(State).filter(State.name == arg)
+    orm = orm.order_by(State.id).all()
     if not orm:
         print("Not found")
     else:
-        for state in orm: 
+        for state in orm:
             print(state.id)
     session.close()
