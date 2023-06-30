@@ -12,4 +12,4 @@ if __name__ == "__main__":
         if count < 10:
             print("{}: {}".format(i.get("sha"),
                   i.get("commit").get("author").get("name")))
-        count+=1
+        count += 1
