@@ -1,4 +1,4 @@
 #!/bin/bash
 # curl get size in bytes
-response=$(curl -sS "$1")
+response=$(curl -Ls "$1")
 echo "$response"
