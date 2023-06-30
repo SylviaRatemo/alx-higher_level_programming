@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """urllib training"""
-import urllib.request as url
+import requests
 
 
 if __name__ == "__main__":
