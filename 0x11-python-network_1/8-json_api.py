@@ -5,8 +5,8 @@ import sys
 
 
 if __name__ == "__main__":
-    data = {"q": argv[1][0] if len(argv) > 1 else ""}
-    r = requests.post('http://0.0.0.0:5000/search_user', data=data)
+    data = {"q": sys.argv[1][0] if len(sys.argv) > 1 else ""}
+    r = requests.post("http://0.0.0.0:5000/search_user", data=data)
     try:
         r = r.json()
         if not r:
