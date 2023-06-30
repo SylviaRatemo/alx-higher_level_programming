@@ -1,17 +1,12 @@
 #!/usr/bin/python3
-"""requests training"""
+""" Github code challenge"""
 import requests
 import sys
 
-
 if __name__ == "__main__":
-    data = {"q": sys.argv[1][0] if len(sys.argv) > 1 else ""}
-    r = requests.post("http://0.0.0.0:5000/search_user", data=data)
+    url = "https://api.github.com/user"
+    r = requests.get(url, auth=(sys.argv[1], sys.argv[2]))
     try:
-        r = r.json()
-        if not r:
-            print("No result")
-        else:
-            print("[{}] {}".format(r.get("id"), r.get("name")))
+        print(r.json().get("id"))
     except ValueError:
         print("Not a valid JSON")
