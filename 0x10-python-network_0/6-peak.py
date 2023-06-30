@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Find the peak"""
+
+
 def find_peak(list_of_integers):
     COUNT = 0
     HIGH = 0
