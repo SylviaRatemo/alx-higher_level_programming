@@ -4,7 +4,6 @@ import urllib.request as url
 import sys
 
 
-with url.urlopen(sys.argv[1]) as response:
-    pass
-
-print(response.headers["X-Request-Id"])
+if __name__ == "__main__":
+    with url.urlopen(sys.argv[1]) as response:
+        print(response.headers["X-Request-Id"])
