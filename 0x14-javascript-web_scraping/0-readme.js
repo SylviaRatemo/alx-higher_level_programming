@@ -1,7 +1,6 @@
 #!/usr/bin/node
 // read file content
 const fs = require('fs');
-
 function readAndPrintFile(filePath) {
   fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) {
