@@ -1,24 +1,17 @@
 #!/usr/bin/node
+//star wars
 const request = require('request');
 
-const url = process.argv[2];
+const Id = process.argv[2];
+const apiUrl = `https://swapi-api.alx-tools.com/api/films/${Id}`;
 
-request(url, (err, res, body) => {
+
+request.get(apiUrl, (err, response, body) => {
   if (err) {
-    return console.log(err);
+    console.error(err);
+  } else {
+    if (response.statusCode === 200) {
+      const Data = JSON.parse(body);
+      console.log(Data.title);
   }
-
-  let count = 0;
-  let parsedBody = JSON.parse(body).results;
-
-  for (let i = 0; i < parsedBody.length; i++) {
-    let a = parsedBody[i].characters.find((c) => {
-      return c.match(/18/);
-    });
-    if (a !== undefined) {
-      count++;
-    }
-  }
-
-  console.log(count);
 });
