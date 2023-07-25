@@ -1,7 +1,24 @@
 #!/usr/bin/node
-// makes get request for SW movie id
 const request = require('request');
-request(`http://swapi.co/api/films/${process.argv[2]}`, function (error, response, body) {
-  error && console.log(error);
-  console.log(JSON.parse(body).title);
+
+const url = process.argv[2];
+
+request(url, (err, res, body) => {
+  if (err) {
+    return console.log(err);
+  }
+
+  let count = 0;
+  let parsedBody = JSON.parse(body).results;
+
+  for (let i = 0; i < parsedBody.length; i++) {
+    let a = parsedBody[i].characters.find((c) => {
+      return c.match(/18/);
+    });
+    if (a !== undefined) {
+      count++;
+    }
+  }
+
+  console.log(count);
 });
